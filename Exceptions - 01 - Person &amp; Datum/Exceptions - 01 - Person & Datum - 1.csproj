@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A1297D06-B137-4EAC-AB18-CFDE3976FA07}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Exceptions___01___Person__amp__Datum</RootNamespace>
-    <AssemblyName>Exceptions - 01 - Person &amp;amp%3b Datum</AssemblyName>
+    <RootNamespace>_01___Ausnahmebehandlung___1</RootNamespace>
+    <AssemblyName>01 - Ausnahmebehandlung - 1</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
