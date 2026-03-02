@@ -9,7 +9,7 @@ namespace _01___Ausnahmebehandlung___2
 {
     internal class YearOutOfRangeException : Exception
     {
-        public YearOutOfRangeException() : base("Das Jahr hat einen ungültigen Wert!")
+        public YearOutOfRangeException(int jahr) : base($"Das Jahr {jahr} ist ungültig!")
         {
         }
     }

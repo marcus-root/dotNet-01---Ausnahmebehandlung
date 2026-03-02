@@ -7,6 +7,14 @@ namespace _01___Ausnahmebehandlung___2
         int _year;
         int _month;
         int _day;
+
+        public SimpleDate()
+        {
+            _year = 0;
+            _month = 0;
+            _day = 0;
+        }
+
         public int Year
         {
             get
@@ -16,7 +24,7 @@ namespace _01___Ausnahmebehandlung___2
             set
             {
                 if (value >= 1 && value <= 9999) _year = value;
-                else throw new YearOutOfRangeException();
+                else throw new YearOutOfRangeException(value);
             }
         }
         public int Month
@@ -28,7 +36,7 @@ namespace _01___Ausnahmebehandlung___2
             set
             {
                 if (value >= 1 && value <= 12) _month = value;
-                else throw new MonthOutOfRangeException();
+                else throw new MonthOutOfRangeException(value);
             }
         }
         public int Day
@@ -40,7 +48,7 @@ namespace _01___Ausnahmebehandlung___2
             set
             {
                 if (value > 0 && value <= TageImMonat(_month)) _day = value;
-                else throw new DayOfMonthException();
+                else throw new DayOfMonthException(value);
             }
         }
 

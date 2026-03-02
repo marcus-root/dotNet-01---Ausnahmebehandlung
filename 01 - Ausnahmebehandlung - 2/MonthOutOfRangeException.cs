@@ -8,7 +8,7 @@ namespace _01___Ausnahmebehandlung___2
 {
     internal class MonthOutOfRangeException : Exception
     {
-        public MonthOutOfRangeException() : base("Der Monat hat einen ungültigen Wert!")
+        public MonthOutOfRangeException(int monat) : base($"Der Monat {monat} ist ungültig!")
         {
         }
     }

@@ -8,7 +8,7 @@ namespace _01___Ausnahmebehandlung___2
 {
     internal class DayOfMonthException : Exception
     {
-        public DayOfMonthException() : base("Der Tag hat einen ungültigen Wert!")
+        public DayOfMonthException(int tag) : base($"Der Tag {tag} ist ungültig!")
         { }
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _01___Ausnahmebehandlung___2
 {
@@ -12,16 +8,28 @@ namespace _01___Ausnahmebehandlung___2
         {
             SimpleDate datum = new SimpleDate();
 
-            datum.Year = 2026; // 2026 ist kein Schaltjahr
-            datum.Month = 2;
-            datum.Day = 29;
+            Console.WriteLine("Zuweisung eines ungültigen Datums:");
+            try
+            {
+                try { datum.Year = 2027; }
+                catch (Exception a) { Console.WriteLine(a.Message); throw; }
+                try { datum.Month = 2; }
+                catch (Exception b) { Console.WriteLine(b.Message); throw; }
+                try { datum.Day = 29; }
+                catch (Exception c) { Console.WriteLine(c.Message); throw; }
+            }
+            catch (Exception e) { Console.WriteLine("Datum Fehlerhaft, Zuweisung abgebrochen"); }
+            finally { Console.WriteLine("try-catch zu ende\n"); }
 
-            datum.Year = 2028; //2028 ist ein Schaltjahr
-            datum.Month = 2;
-            datum.Day = 29;
-
-            Console.WriteLine("Keine Fehler.");
-
+            Console.WriteLine("gültiges Datum:");
+            try
+            {
+                datum.Year = 2028; //2028 ist ein Schaltjahr
+                datum.Month = 2;
+                datum.Day = 29;
+            }
+            catch (Exception e) { Console.WriteLine(e.Message); }
+            finally { Console.WriteLine("try-catch zu ende"); }
         }
     }
 }
